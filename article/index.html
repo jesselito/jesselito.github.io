@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./img/icon.png">
+    <link rel="stylesheet" href="style.css">
+    <title>Article: DNS Error 1001</title>
+</head>
+
+<body>
+    <img id="logo" src="./img/homestead logo.png" alt="">
+    <h1>Troubleshooting DNS Error 1001 for Website Builder </h1>
+    <p>Created by: Jesse Lito Jadulco 2/24/2024 (For Demo Purpose Only)</p>
+    <img class="img-wb" src="./img/website-ssl.png" alt="">
+
+    <p>Homestead websites built using Website Builder can be secured using free SSL. Normal SSL installation can be done
+        by updating the A record to point to secure IP address which can be found in this <a
+            href="https://community.homestead.com/conversations/websitebuilder/websitebuilder-ssl/5f2a9b3158180958845dab29">link</a>
+        However, there are cases where DNS Error 1001 appears after updating the A record.
+    </p>
+    <img class="img-wb" src="./img/dns error.png" alt="DNS Error 1001 Snippet">
+
+    <p>The Engineering Team is aware of this problem and looking for a permanent resolution. As a workaround, kindly
+        follow the instructions below. </p>
+    <ol>
+        <li>Create a temporary website using Website Builder in Websites Manager page.
+            <h2><span class="collapse">+</span>To create a new Website Builder site:</h2>
+            <ol class="second-level-ol content-group">
+                <li>Log in to your Homestead account.</li>
+                <li>
+                    Click on the Websites Manager tab, then click on Add New Website.
+                    <img class="img-wb" src="./img/createsitestep1.png" alt="">
+                </li>
+                <li>Please provide a unique name for the site. This is just a placeholder that your site will be built
+                    under until you choose a domain name. Alternatively, you can choose to only use the site name, in
+                    which case, your site will work with the .homesteadcloud.com URL.</li>
+                <li>Click Add this Site. If the site name is already in use, you will be prompted to choose a different
+                    name.
+                    You do not enter a domain name in this space.</li>
+                <li>If your name is available, you will be taken back to the Websites Manager page.
+                    <img class="img-wb" src="./img/createsitestep5.png" alt="Select Site Name Image">
+                </li>
+                <li>If you are ready to move on, click Choose Design.
+                    <img class="img-wb" src="./img/createsitestep6.png" alt="Choose Design Image">
+                </li>
+                <li>Select any template for the temporary website. No need to publish.
+                    <img class="img-wb" src="./img/createsitestep7.png" alt="Select Template Image">
+                </li>
+            </ol>
+        </li>
+        <li>Associate the domain to the temporary website.
+            <ol class="second-level-ol">
+                <li>Click the "Domains" link in the left navigation menu.</li>
+                <li>Scroll down until you see your domain name and click Change Site Association.
+                    <img class="img-wb" src="./img/site-assoc.png" alt="Change Site Association Image">
+                </li>
+                <li>Choose the website you'd like your domain name to point to using the drop-down menu.</li>
+                <li>Click <strong>Save</strong> to confirm the change.<br><br>
+                    It may take some time for this change to reflect.</li>
+            </ol>
+            <p class="note">Note: Please take note of the Homestead Cloud URL for the original website as the domain
+                will be
+                reassociated to it later. </p>
+        </li>
+        <li>Republish the original website without the domain name using the Homestead Cloud URL only.</li>
+        <li>After 5-15 minutes, re-associate the domain to the original website.</li>
+        <li>Publish the website with the domain.</li>
+        <li>Open homesteadssl.com by entering the domain name in the text box.</li>
+        <li>Click Next.
+            <p class="note">Note: Kindly disregard if the last 2 digits of the IP address are different from the current
+                A record.
+                Homestead uses a secured IP range for SSL certificates. </p>
+        </li>
+        <li>Advise customer for standard propagation time within 24 hours.</li>
+        <li>Delete the temporary website unless instructed by customer not to do so.</li>
+    </ol>
+    <script src="app.js"></script>
+</body>
+
+</html>
