@@ -1,0 +1,42 @@
+body{
+    font-family: Graphik, Arial;
+    margin: 2%;
+}
+
+#menu-bar{
+    margin: 50px 100px;    
+}
+
+.list-group-item{
+    border-style: none;
+}
+
+form{
+    width: 50%;
+}
+
+#cnxrole{
+   margin-left: 40px;
+}
+
+.cosm-icon{
+    max-height: 75px;
+    max-width: 75px;
+}
+
+.title-logo{
+    max-height: 200px;
+    max-width: 200px;
+}
+
+#main-img{
+    max-height: 275px;
+    max-width: 275px;
+}
+
+.img-comment{
+    max-width: 1000px;
+    max-height: 400px;
+    margin: 10px;
+    border: solid 2px lightblue;
+}
