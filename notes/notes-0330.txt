@@ -1,0 +1,8 @@
+
+
+Changes made:
+
+1. Removed the day of my birthdate in all pages
+2. Hid digits of my phone number in all pages
+3. created feedback page.
+4. 
