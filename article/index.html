@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 
-<body class="site-page guide-page">
+<body class="site-page guide-page initiatives-locked">
     <header class="site-header">
         <nav class="navbar navbar-expand-lg container site-nav" aria-label="Main navigation">
             <a class="navbar-brand brand-mark" href="../index.html" aria-label="Jesse Lito Jadulco home">
@@ -31,16 +31,37 @@
                     <li class="nav-item"><a class="nav-link" href="../index.html#about">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="../index.html#experience">Experience</a></li>
                     <li class="nav-item"><a class="nav-link" href="../skills.html">Skills</a></li>
-                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="../engagements.html">Initiatives</a></li>
                     <li class="nav-item"><a class="nav-link" href="../feedback.html">Feedback</a></li>
                     <li class="nav-item"><a class="nav-link" href="../encyclicals.html">Reading</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../writing.html">Writing</a></li>
                     <li class="nav-item nav-contact"><a class="nav-link" href="../contact.html">Contact <span aria-hidden="true">↗</span></a></li>
                 </ul>
             </div>
         </nav>
     </header>
 
-    <main class="site-main guide-main">
+    <main class="site-main initiative-access-gate">
+        <section class="page-hero">
+            <div class="container">
+                <div class="access-card">
+                    <span class="brand-monogram access-monogram" aria-hidden="true">JL</span>
+                    <p class="eyebrow">Private section</p>
+                    <h1>Initiatives &amp; engagements</h1>
+                    <p class="page-intro-copy">Enter the passcode to continue.</p>
+                    <form class="access-form" data-access-form>
+                        <label class="form-label" for="initiative-passcode">Passcode</label>
+                        <input class="form-control" id="initiative-passcode" name="passcode" type="password"
+                            autocomplete="current-password" required>
+                        <small class="access-hint">Hint: name of my 1st dog.</small>
+                        <p class="access-error" data-access-error role="status" aria-live="polite"></p>
+                        <button class="btn btn-accent" type="submit">Continue <span aria-hidden="true">↗</span></button>
+                    </form>
+                    <a class="access-home-link" href="../index.html">← Back to home</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <main class="site-main guide-main initiatives-protected-content">
         <section class="page-hero guide-hero">
             <div class="container">
                 <a class="guide-back-link" href="../engagements.html">← Back to initiatives</a>
@@ -134,6 +155,7 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
     <script src="./app.js"></script>
+    <script src="../initiatives-access.js"></script>
 </body>
 
 </html>

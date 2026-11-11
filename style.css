@@ -1308,6 +1308,114 @@ html{
     font-weight: 700;
 }
 
+.site-page .writing-workspace{
+    min-height: calc(100vh - 190px);
+    padding: clamp(2.5rem, 6vw, 5rem) 0;
+    background:
+        radial-gradient(ellipse at 87% 35%, rgba(108, 174, 159, 0.12), transparent 34%),
+        var(--home-paper);
+}
+
+.site-page .writing-editor-card{
+    display: flex;
+    min-height: min(72vh, 780px);
+    flex-direction: column;
+    padding: clamp(1.25rem, 3vw, 2rem);
+    border: 1px solid var(--home-line);
+    border-radius: 14px;
+    background: #fff;
+    box-shadow: 0 14px 42px rgba(23, 45, 53, 0.05);
+}
+
+.site-page .writing-editor-heading{
+    margin-bottom: 1.2rem;
+}
+
+.site-page .writing-editor-heading .eyebrow{
+    margin: 0 0 0.4rem;
+    color: var(--home-accent);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.site-page .writing-editor-heading h1{
+    margin: 0;
+    color: var(--home-ink);
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-weight: 800;
+    letter-spacing: -0.05em;
+}
+
+.site-page .writing-textarea{
+    min-height: 42vh;
+    flex: 1;
+    border: 1px solid var(--home-line);
+    border-radius: 8px;
+    background: #fdfefd;
+    padding: 1rem;
+    color: var(--home-ink);
+    font: inherit;
+    line-height: 1.8;
+    resize: vertical;
+}
+
+.site-page .writing-textarea::placeholder{
+    color: #a0ada8;
+}
+
+.site-page .writing-textarea:focus{
+    border-color: var(--home-accent);
+    background: #fff;
+    box-shadow: 0 0 0 0.2rem rgba(28, 120, 111, 0.12);
+}
+
+.site-page .writing-editor-footer{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 1.5rem;
+    padding-top: 1.1rem;
+}
+
+.site-page .writing-storage-note,
+.site-page .writing-status{
+    margin: 0;
+    color: var(--home-muted);
+    font-size: 0.78rem;
+    line-height: 1.6;
+}
+
+.site-page .writing-status{
+    margin-top: 0.25rem;
+    color: var(--home-accent);
+    font-weight: 600;
+}
+
+.site-page .writing-editor-actions{
+    display: flex;
+    flex: 0 0 auto;
+    align-items: center;
+    gap: 0.55rem;
+}
+
+.site-page .writing-clear-button{
+    border: 1px solid #d3ded9;
+    border-radius: 6px;
+    background: #fff;
+    padding: 0.78rem 1rem;
+    color: var(--home-muted);
+    font-size: 0.86rem;
+    font-weight: 600;
+}
+
+.site-page .writing-clear-button:hover{
+    border-color: #bacbc3;
+    background: #f7faf8;
+    color: var(--home-ink);
+}
+
 .site-page .site-footer{
     background: var(--home-ink);
     color: #dbe5e1;
@@ -1552,6 +1660,84 @@ html{
     color: var(--home-ink);
 }
 
+.site-page.initiatives-locked .initiatives-protected-content{
+    display: none;
+}
+
+.site-page:not(.initiatives-locked) .initiative-access-gate{
+    display: none;
+}
+
+.site-page .access-card{
+    width: min(100%, 520px);
+    margin: 0 auto;
+    padding: clamp(1.5rem, 5vw, 2.5rem);
+    border: 1px solid var(--home-line);
+    border-radius: 14px;
+    background: #fff;
+    box-shadow: 0 16px 46px rgba(23, 45, 53, 0.07);
+}
+
+.site-page .access-monogram{
+    margin-bottom: 1.4rem;
+}
+
+.site-page .access-card h1{
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
+}
+
+.site-page .access-card .page-intro-copy{
+    margin-top: 0.75rem;
+    font-size: 0.95rem;
+}
+
+.site-page .access-form{
+    margin-top: 1.5rem;
+}
+
+.site-page .access-form .form-label{
+    margin-bottom: 0.4rem;
+    color: var(--home-ink);
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.site-page .access-form .form-control{
+    min-height: 46px;
+    border: 1px solid #d3ded9;
+    border-radius: 6px;
+    background: #fcfdfb;
+    padding: 0.65rem 0.8rem;
+    color: var(--home-ink);
+    font: inherit;
+}
+
+.site-page .access-form .form-control:focus{
+    border-color: var(--home-accent);
+    box-shadow: 0 0 0 0.2rem rgba(28, 120, 111, 0.14);
+}
+
+.site-page .access-hint{
+    display: block;
+    margin-top: 0.45rem;
+    color: var(--home-muted);
+    font-size: 0.78rem;
+}
+
+.site-page .access-error{
+    min-height: 1.4em;
+    margin: 0.55rem 0;
+    color: #a13b36;
+    font-size: 0.82rem;
+}
+
+.site-page .access-home-link{
+    display: inline-block;
+    margin-top: 1.3rem;
+    font-size: 0.84rem;
+    font-weight: 700;
+}
+
 .site-page .image-caption{
     margin: 0.7rem 0 0.5rem;
     color: #83918d;
@@ -1630,6 +1816,20 @@ html{
     .site-page .step-heading{
         align-items: flex-start;
         flex-direction: column;
+    }
+
+    .site-page .writing-editor-card{
+        min-height: 70vh;
+    }
+
+    .site-page .writing-editor-footer{
+        align-items: stretch;
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+
+    .site-page .writing-editor-actions{
+        justify-content: flex-end;
     }
 }
 
