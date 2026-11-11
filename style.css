@@ -34,6 +34,108 @@ form{
     max-width: 275px;
 }
 
+.contact-page{
+    --contact-accent: #176f67;
+    --contact-ink: #20302e;
+    --contact-muted: #52615f;
+    background-color: #f5f8f6;
+    color: var(--contact-ink);
+}
+
+.contact-page .contact-content{
+    padding: 1.5rem 1rem 2.5rem;
+}
+
+.contact-page .contact-title{
+    margin-bottom: 0.75rem;
+    color: var(--contact-accent);
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.contact-page .contact-content > p{
+    max-width: 680px;
+    margin-bottom: 1.5rem;
+    color: var(--contact-muted);
+    line-height: 1.65;
+}
+
+.contact-page .contact-form{
+    width: min(100%, 680px);
+}
+
+.contact-page .contact-form .form-group{
+    margin-bottom: 1.1rem;
+}
+
+.contact-page .contact-form label{
+    display: block;
+    margin-bottom: 0.4rem;
+    color: var(--contact-ink);
+    font-weight: 600;
+}
+
+.contact-page .contact-form .form-control{
+    min-height: 46px;
+    border: 1px solid #b9c6c2;
+    border-radius: 4px;
+    background-color: #fff;
+    padding: 0.65rem 0.8rem;
+}
+
+.contact-page .contact-form textarea.form-control{
+    min-height: 140px;
+    resize: vertical;
+}
+
+.contact-page .contact-form .form-control:focus{
+    border-color: var(--contact-accent);
+    box-shadow: 0 0 0 0.2rem rgba(23, 111, 103, 0.16);
+}
+
+.contact-page .contact-form #emailHelp{
+    display: block;
+    margin-top: 0.45rem;
+    color: var(--contact-muted) !important;
+}
+
+.contact-page .contact-form .btn-primary{
+    min-width: 120px;
+    border-color: var(--contact-accent);
+    border-radius: 4px;
+    background-color: var(--contact-accent);
+    padding: 0.65rem 1.1rem;
+    font-weight: 600;
+}
+
+.contact-page .contact-form .btn-primary:hover{
+    border-color: #10584f;
+    background-color: #10584f;
+}
+
+@media (max-width: 767.98px){
+    .contact-page #menu-bar{
+        margin: 1.5rem 0;
+    }
+
+    .contact-page #menu-bar .nav{
+        gap: 0.25rem;
+    }
+
+    .contact-page #menu-bar .nav-link{
+        padding: 0.55rem 0.4rem;
+        font-size: 0.85rem;
+    }
+
+    .contact-page .contact-content{
+        padding: 1rem 0.75rem 2rem;
+    }
+
+    .contact-page .contact-title{
+        font-size: 1.75rem;
+    }
+}
+
 .img-comment{
     max-width: 1000px;
     max-height: 400px;
