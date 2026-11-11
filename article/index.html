@@ -4,79 +4,136 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="./img/icon.png">
-    <link rel="stylesheet" href="style.css">
-    <title>Article: DNS Error 1001</title>
+    <meta name="description" content="A step-by-step workaround for Homestead Website Builder SSL DNS Error 1001.">
+    <title>Troubleshooting DNS Error 1001 | Jesse Lito Jadulco</title>
+    <link rel="icon" type="image/png" href="./img/icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="./style.css">
 </head>
 
-<body>
-    <img id="logo" src="./img/homestead logo.png" alt="">
-    <h1>Troubleshooting DNS Error 1001 for Website Builder </h1>
-    <p>Created by: Jesse Lito Jadulco 2/24/2024 (For Demo Purpose Only)</p>
-    <img class="img-wb" src="./img/website-ssl.png" alt="">
+<body class="site-page guide-page">
+    <header class="site-header">
+        <nav class="navbar navbar-expand-lg container site-nav" aria-label="Main navigation">
+            <a class="navbar-brand brand-mark" href="../index.html" aria-label="Jesse Lito Jadulco home">
+                <span class="brand-monogram" aria-hidden="true">JL</span><span>Jesse Lito Jadulco</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#siteNavigation"
+                aria-controls="siteNavigation" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="siteNavigation">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <li class="nav-item"><a class="nav-link" href="../index.html#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html#experience">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../skills.html">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="../engagements.html">Initiatives</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../feedback.html">Feedback</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../encyclicals.html">Reading</a></li>
+                    <li class="nav-item nav-contact"><a class="nav-link" href="../contact.html">Contact <span aria-hidden="true">↗</span></a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
 
-    <p>Homestead websites built using Website Builder can be secured using free SSL. Normal SSL installation can be done
-        by updating the A record to point to secure IP address which can be found in this <a
-            href="https://community.homestead.com/conversations/websitebuilder/websitebuilder-ssl/5f2a9b3158180958845dab29">link</a>
-        However, there are cases where DNS Error 1001 appears after updating the A record.
-    </p>
-    <img class="img-wb" src="./img/dns error.png" alt="DNS Error 1001 Snippet">
+    <main class="site-main guide-main">
+        <section class="page-hero guide-hero">
+            <div class="container">
+                <a class="guide-back-link" href="../engagements.html">← Back to initiatives</a>
+                <p class="eyebrow">Homestead · Troubleshooting guide</p>
+                <h1>Troubleshooting DNS Error 1001</h1>
+                <p class="page-intro-copy">A workaround for SSL setup issues on websites built with Homestead Website
+                    Builder.</p>
+                <div class="guide-byline">
+                    <img id="logo" src="./img/homestead logo.png" alt="Homestead">
+                    <span><strong>Written by Jesse Lito Jadulco</strong><small>February 24, 2024 · For demo purposes</small></span>
+                </div>
+            </div>
+        </section>
 
-    <p>The Engineering Team is aware of this problem and looking for a permanent resolution. As a workaround, kindly
-        follow the instructions below. </p>
-    <ol>
-        <li>Create a temporary website using Website Builder in Websites Manager page.
-            <h2><span class="collapse">+</span>To create a new Website Builder site:</h2>
-            <ol class="second-level-ol content-group">
-                <li>Log in to your Homestead account.</li>
-                <li>
-                    Click on the Websites Manager tab, then click on Add New Website.
-                    <img class="img-wb" src="./img/createsitestep1.png" alt="">
-                </li>
-                <li>Please provide a unique name for the site. This is just a placeholder that your site will be built
-                    under until you choose a domain name. Alternatively, you can choose to only use the site name, in
-                    which case, your site will work with the .homesteadcloud.com URL.</li>
-                <li>Click Add this Site. If the site name is already in use, you will be prompted to choose a different
-                    name.
-                    You do not enter a domain name in this space.</li>
-                <li>If your name is available, you will be taken back to the Websites Manager page.
-                    <img class="img-wb" src="./img/createsitestep5.png" alt="Select Site Name Image">
-                </li>
-                <li>If you are ready to move on, click Choose Design.
-                    <img class="img-wb" src="./img/createsitestep6.png" alt="Choose Design Image">
-                </li>
-                <li>Select any template for the temporary website. No need to publish.
-                    <img class="img-wb" src="./img/createsitestep7.png" alt="Select Template Image">
-                </li>
-            </ol>
-        </li>
-        <li>Associate the domain to the temporary website.
-            <ol class="second-level-ol">
-                <li>Click the "Domains" link in the left navigation menu.</li>
-                <li>Scroll down until you see your domain name and click Change Site Association.
-                    <img class="img-wb" src="./img/site-assoc.png" alt="Change Site Association Image">
-                </li>
-                <li>Choose the website you'd like your domain name to point to using the drop-down menu.</li>
-                <li>Click <strong>Save</strong> to confirm the change.<br><br>
-                    It may take some time for this change to reflect.</li>
-            </ol>
-            <p class="note">Note: Please take note of the Homestead Cloud URL for the original website as the domain
-                will be
-                reassociated to it later. </p>
-        </li>
-        <li>Republish the original website without the domain name using the Homestead Cloud URL only.</li>
-        <li>After 5-15 minutes, re-associate the domain to the original website.</li>
-        <li>Publish the website with the domain.</li>
-        <li>Open homesteadssl.com by entering the domain name in the text box.</li>
-        <li>Click Next.
-            <p class="note">Note: Kindly disregard if the last 2 digits of the IP address are different from the current
-                A record.
-                Homestead uses a secured IP range for SSL certificates. </p>
-        </li>
-        <li>Advise customer for standard propagation time within 24 hours.</li>
-        <li>Delete the temporary website unless instructed by customer not to do so.</li>
-    </ol>
-    <script src="app.js"></script>
+        <article class="container guide-container">
+            <div class="guide-prose">
+                <img class="img-wb guide-lead-image" src="./img/website-ssl.png"
+                    alt="Homestead Website Builder SSL setup">
+                <p>Homestead websites built using Website Builder can be secured using free SSL. Normal SSL installation
+                    can be done by updating the A record to point to a secure IP address, which can be found in this
+                    <a href="https://community.homestead.com/conversations/websitebuilder/websitebuilder-ssl/5f2a9b3158180958845dab29"
+                        target="_blank" rel="noopener noreferrer">Homestead community article</a>. In some cases,
+                    however, DNS Error 1001 appears after updating the A record.</p>
+                <img class="img-wb" src="./img/dns error.png" alt="Example of DNS Error 1001">
+                <p>The Engineering Team is aware of this problem and is looking for a permanent resolution. As a
+                    workaround, follow the instructions below.</p>
+                <ol class="guide-steps">
+                    <li>
+                        <div class="step-heading">
+                            <span>Create a temporary website using Website Builder in the Websites Manager page.</span>
+                            <button class="guide-toggle" type="button" aria-controls="create-site-steps"
+                                aria-expanded="false">Show setup steps <span aria-hidden="true">+</span></button>
+                        </div>
+                        <ol id="create-site-steps" class="second-level-ol content-group" aria-hidden="true" inert>
+                            <li>Log in to your Homestead account.</li>
+                            <li>Click the Websites Manager tab, then click Add New Website.
+                                <img class="img-wb" src="./img/createsitestep1.png"
+                                    alt="Websites Manager with Add New Website option">
+                            </li>
+                            <li>Provide a unique name for the site. This is a placeholder until you choose a domain
+                                name. Alternatively, you can use the site name with its .homesteadcloud.com URL.</li>
+                            <li>Click Add this Site. If the site name is already in use, choose a different name. Do not
+                                enter a domain name here.</li>
+                            <li>If the name is available, you will return to the Websites Manager page.
+                                <img class="img-wb" src="./img/createsitestep5.png" alt="Selecting a site name">
+                            </li>
+                            <li>When ready, click Choose Design.
+                                <img class="img-wb" src="./img/createsitestep6.png" alt="Choose Design option">
+                            </li>
+                            <li>Select any template for the temporary website. There is no need to publish it.
+                                <img class="img-wb" src="./img/createsitestep7.png" alt="Choosing a temporary site template">
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        <span>Associate the domain with the temporary website.</span>
+                        <ol class="second-level-ol">
+                            <li>Click the Domains link in the left navigation menu.</li>
+                            <li>Scroll to your domain and click Change Site Association.
+                                <img class="img-wb" src="./img/site-assoc.png" alt="Change Site Association option">
+                            </li>
+                            <li>Choose the website you want the domain to point to from the drop-down menu.</li>
+                            <li>Click <strong>Save</strong> to confirm the change. It may take some time to take effect.</li>
+                        </ol>
+                        <p class="note"><strong>Note:</strong> Keep the Homestead Cloud URL for the original website; you
+                            will associate the domain with it again later.</p>
+                    </li>
+                    <li>Republish the original website without the domain name, using only the Homestead Cloud URL.</li>
+                    <li>After 5–15 minutes, associate the domain with the original website again.</li>
+                    <li>Publish the website with the domain.</li>
+                    <li>Open homesteadssl.com and enter the domain name.</li>
+                    <li>Click Next.
+                        <p class="note"><strong>Note:</strong> Disregard differences in the last two digits of the IP
+                            address. Homestead uses a secured IP range for SSL certificates.</p>
+                    </li>
+                    <li>Advise the customer that propagation can take up to 24 hours.</li>
+                    <li>Delete the temporary website unless the customer asks to keep it.</li>
+                </ol>
+            </div>
+        </article>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <a class="footer-brand" href="../index.html">JL <span>Jesse Lito Jadulco</span></a>
+            <p>More workplace contributions and guides in <a href="../engagements.html">initiatives</a>.</p>
+            <a class="footer-contact" href="../contact.html">Get in touch <span aria-hidden="true">↗</span></a>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="./app.js"></script>
 </body>
 
 </html>

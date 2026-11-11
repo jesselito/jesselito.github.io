@@ -4,91 +4,126 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Candidate Profile: HTML Project</title>
+    <meta name="description" content="Selected workplace initiatives, support guides, and process improvements by Jesse Lito Jadulco.">
+    <title>Initiatives | Jesse Lito Jadulco</title>
     <link rel="icon" type="image/x-icon" href="./img/litosanfv.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="./style.css">
 </head>
 
-<body>
-    <div class="container">
-        <div class="row">
-            <div class="col text-end">
-                <img id="main-img" class="rounded-circle img-fluid" src="./img/profilepic.jpg" alt="Profile Pic">
-            </div>
-            <div class="col text-start">
-                <h1>Jesse Lito A. Jadulco</h1>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Address: Quezon City, Philippines</li>
-                    <li class="list-group-item">Date of Birth: January 1999</li>
-                    <li class="list-group-item">Email address: jessejad.jlj@gmail.com</li>
-                    <li class="list-group-item">Civil Status: Single</li>
-                    <li class="list-group-item">Contact Number: +63976-xxx-8925</li>
+<body class="site-page">
+    <header class="site-header">
+        <nav class="navbar navbar-expand-lg container site-nav" aria-label="Main navigation">
+            <a class="navbar-brand brand-mark" href="./index.html" aria-label="Jesse Lito Jadulco home">
+                <span class="brand-monogram" aria-hidden="true">JL</span><span>Jesse Lito Jadulco</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#siteNavigation"
+                aria-controls="siteNavigation" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="siteNavigation">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <li class="nav-item"><a class="nav-link" href="./index.html#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./index.html#experience">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./skills.html">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="./engagements.html">Initiatives</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./feedback.html">Feedback</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./encyclicals.html">Reading</a></li>
+                    <li class="nav-item nav-contact"><a class="nav-link" href="./contact.html">Contact <span aria-hidden="true">↗</span></a></li>
                 </ul>
             </div>
-        </div>
-        <div id="menu-bar" class="row">
-            <ul class="nav nav-pills nav-fill">
-                <li class="nav-item">
-                    <a class="nav-link" href="./index.html">ABOUT ME</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">INITIATIVES & ENGAGEMENTS</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="./skills.html">SKILLS</a>
-                  </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="./feedback.html">FEEDBACK</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="./contact.html">CONTACT</a>
-                </li>
-            </ul>
-        </div>
-        <h2>Initiatives and Engagements</h2>
-        <p>This page showcases the contributions and achievements outside of my regular work responsibilities as Web
-            Advisor</p>
-        <div class="card mb-3">
-            <img class="card-img-top title-logo" style="width: 18rem;" src="./img/hmslogo.png" alt="Homestead">
-            <div class="card-body">
-                <h5 class="card-title">Contributions in Homestead</h5>
-                <ol>
-                    <li class="card-text">Created a <a href="./article/index.html">guide</a> on how to resolve Homestead
-                        SSL DNS Error 1001</li>
-                    <li class="card-text">Investigated discrepancy on calculations the team's failed Quality Audit
-                        scores which prompted Quality Department to conduct further review on their work files and
-                        corrected the errors</li>
-                </ol>
+        </nav>
+    </header>
+
+    <main class="site-main">
+        <section class="page-hero">
+            <div class="container">
+                <p class="eyebrow">Beyond the day-to-day</p>
+                <h1>Initiatives &amp; engagements</h1>
+                <p class="page-intro-copy">A selection of practical resources, process contributions, and team
+                    knowledge-sharing from my work as a Web Advisor.</p>
             </div>
-        </div>
-        <div class="card mb-3">
-            <img class="card-img-top title-logo" style="width: 18rem;" src="./img/ipglogo.png" alt="iPage">
-            <div class="card-body">
-                <h5 class="card-title">Contributions in iPage</h5>
-                <ol>
-                    <li class="card-text">Created a <a href="./article2/index.html">guide</a> for new team members how
-                        to acknowledge Quality Audits</li>
-                    <li class="card-text">Submitted 4 <a href="./process_enhance.pdf" target="_blank">Process Improvement Ideas</a> to iPage Operations Manager </li>
-                    <li class="card-text">Actively engaged in iPage Confluence Space for various comments and
-                        suggestions
-                        which were successfully acknowledged and implemented. Example comments or suggestions can be found below:</li>
-                        <ul class="list-group">
-                            <li class="list-group-item">Suggestion to update ProServe Article was implemented.
-                                <img class="img-comment" src="./img/comment_proserve1.png" alt="">
-                            </li>
-                            <li class="list-group-item">Question about Microsoft License Transfer was answered.
-                                <img class="img-comment" src="./img/comment_microsoft1.png" alt="">
-                            </li>
-                            <li class="list-group-item">Suggestion to add information about Google Workspace License Consolidation was implemented.
-                                <img class="img-comment" src="./img/comment_google1.png" alt="">
-                            </li>
+        </section>
+        <section class="site-section">
+            <div class="container">
+                <article class="initiative-card">
+                    <div class="initiative-brand">
+                        <img src="./img/hmslogo.png" alt="Homestead" class="initiative-logo">
+                        <span class="initiative-label">Customer resources</span>
+                    </div>
+                    <div class="initiative-content">
+                        <p class="eyebrow">Homestead</p>
+                        <h2>Making website support easier to follow</h2>
+                        <p class="initiative-intro">Created and contributed to resources that help customers and
+                            teammates resolve common web hosting challenges.</p>
+                        <ul class="initiative-list">
+                            <li><a href="./article/index.html">Wrote a troubleshooting guide for Homestead Website
+                                    Builder SSL DNS Error 1001.</a></li>
+                            <li>Investigated inconsistencies in failed Quality Audit score calculations, prompting a
+                                further review and correction of the underlying work files.</li>
                         </ul>
-                </ol>
+                    </div>
+                </article>
+
+                <article class="initiative-card">
+                    <div class="initiative-brand">
+                        <img src="./img/ipglogo.png" alt="iPage" class="initiative-logo">
+                        <span class="initiative-label">Team enablement</span>
+                    </div>
+                    <div class="initiative-content">
+                        <p class="eyebrow">iPage</p>
+                        <h2>Sharing knowledge and improving processes</h2>
+                        <p class="initiative-intro">Contributed practical documentation and ideas for continuous
+                            improvement across team resources.</p>
+                        <ul class="initiative-list">
+                            <li>Created a <a href="./article2/index.html">guide for new team members on acknowledging
+                                    Pulse Quality Audits.</a></li>
+                            <li>Submitted four <a href="./process_enhance.pdf" target="_blank" rel="noopener">process
+                                    improvement ideas to the iPage Operations Manager</a>.</li>
+                            <li>Shared questions and suggestions in the iPage Confluence Space, including the examples
+                                below.</li>
+                        </ul>
+                        <div class="row g-3 contribution-gallery">
+                            <div class="col-md-4">
+                                <figure class="contribution-item">
+                                    <img src="./img/comment_proserve1.png" alt="Confluence discussion about a ProServe article update">
+                                    <figcaption>ProServe article update adopted</figcaption>
+                                </figure>
+                            </div>
+                            <div class="col-md-4">
+                                <figure class="contribution-item">
+                                    <img src="./img/comment_microsoft1.png" alt="Confluence question and answer about a Microsoft license transfer">
+                                    <figcaption>Microsoft license transfer question answered</figcaption>
+                                </figure>
+                            </div>
+                            <div class="col-md-4">
+                                <figure class="contribution-item">
+                                    <img src="./img/comment_google1.png" alt="Confluence discussion about Google Workspace license consolidation">
+                                    <figcaption>Google Workspace license information added</figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <div class="page-callout">
+                    <div><p class="eyebrow">More how-to resources</p><h2>Practical guides for real-world support.</h2></div>
+                    <a class="btn btn-accent" href="./contact.html">Let’s connect <span aria-hidden="true">↗</span></a>
+                </div>
             </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <a class="footer-brand" href="./index.html">JL <span>Jesse Lito Jadulco</span></a>
+            <p>Thanks for stopping by. Let’s make technology work better for people.</p>
+            <a class="footer-contact" href="./contact.html">Get in touch <span aria-hidden="true">↗</span></a>
         </div>
-    </div>
+    </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
